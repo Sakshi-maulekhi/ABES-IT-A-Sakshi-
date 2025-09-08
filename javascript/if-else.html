@@ -6,8 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button onclick="document.write(checkEvenOdd(4))">Check Even/Odd</button>
+    <br><br>
     <script>
+        function checkEvenOdd(num){
+            if(num % 2 == 0){
+                return "Even";
+            }
+            else{
+                return "Odd";
+            }
+        }
         var age = 18;
         if(age < 18){
             document.write("You are a minor.");
