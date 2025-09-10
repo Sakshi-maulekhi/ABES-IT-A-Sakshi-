@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .adi{
+            border: 2px solid red;
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class = "adi">
+        <button onclick="fun()">Click Me</button>
+
+    </div>
+    <script>
+        function fun(){
+            document.querySelector(".adi").style.backgroundColor = "blue";
+            reset();
+        }
+        function reset(){
+            document.querySelector("adi").style.backgroundColor = "yellow";
+        }
+    </script>
+</body>
+</html>
