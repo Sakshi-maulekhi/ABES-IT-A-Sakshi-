@@ -14,18 +14,33 @@
     </style>
 </head>
 <body>
-    <div class = "adi">
+    <!-- <div class = "adi">
         <button onclick="fun()">Click Me</button>
 
-    </div>
+    </div> -->
+    <button onclick = "red()">RED</button>
+    <button onclick ="blue()" >BLUE</button>
+    <button onclick ="green()" >GREEN</button>
+    
+
     <script>
-        function fun(){
-            document.querySelector(".adi").style.backgroundColor = "blue";
-            reset();
+        // function fun(){
+        //     document.querySelector(".adi").style.backgroundColor = "blue";
+        //     reset();
+        // }
+        // function reset(){
+        //     document.querySelector("adi").style.backgroundColor = "yellow";
+        // }
+        function red(){
+            document.body.style.backgroundColor = "red";
         }
-        function reset(){
-            document.querySelector("adi").style.backgroundColor = "yellow";
+        function blue(){
+            document.body.style.backgroundColor = "blue";
         }
+        function green(){
+            document.body.style.backgroundColor = "green";
+        }
+
     </script>
 </body>
 </html>
