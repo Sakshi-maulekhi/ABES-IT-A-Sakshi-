@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Better Cards</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #f9a8d4, #c084fc);
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      width: 280px;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      margin: 10px 0;
+      font-size: 22px;
+      color: #333;
+    }
+
+    .card button {
+      padding: 10px 20px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 10px;
+      background: #6d28d9;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .card button:hover {
+      background: #9333ea;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Card 1 -->
+  <div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfWYgLl81OU-CG60JSGYu4Y884B-XqD9GizA&s" alt="Logo">
+    <h2>Hide Logo</h2>
+    <button onclick="hide()">Hide</button>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <img id="ch" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTie8oeUNeIzw1ekfl53xbDPitQDWgt2TZ2noVMcK2dVwSIYxO0PgCSBY7wRp3pQMb8j5XseCVe3SA8OOiGny9dFjIaxAaZXqMCUJTaZw" alt="Character">
+    <h2>Change Image</h2>
+    <button onclick="change()">Change</button>
+  </div>
+
+  <script>
+    function hide() {
+      document.querySelector(".card img").style.display = "none";
+    }
+
+    function change() {
+      document.querySelector("#ch").src =
+        "https://upload.wikimedia.org/wikipedia/en/b/bd/Doraemon_character.png";
+    }
+  </script>
+
+</body>
+</html>
