@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var i;
+        // for(i=1;i<=10;i++){
+        //     document.write("hello <br>");
+        // }
+        // var a=1;
+        // while(a<=10){
+        //     document.write("ABES <br>");
+        //     a++;
+        // }
+        // var a=1;
+        // do{
+        //     document.write("Python <br>");
+        //     a++;
+        // }while(a<=10);
+
+       let evens = "";
+       let odds = "";
+
+
+       document.write("Table of 2<br>");
+       for (let i = 1; i <= 10; i++) {
+       let result = 2 * i;
+       document.write("2x" + i + "=" + result + "<br>");
+       if (result % 2 == 0) {
+        evens += result + " ";
+       } else {
+        odds += result + " ";
+       }
+    }
+       
+
+document.write("<br>");
+document.write("Table of 3<br>");
+for (let i = 1; i <= 10; i++) {
+    let result = 3 * i;
+    document.write("3x" + i + "=" + result + "<br>");
+    if (result % 2 === 0) {
+        evens += result + " ";
+    } else {
+        odds += result + " ";
+    }
+}
+
+document.write("<br><br>");
+document.write("Even: " + evens + "<br>");
+document.write("Odd: " + odds);
+
+
+    </script>
+</body>
+</html>
