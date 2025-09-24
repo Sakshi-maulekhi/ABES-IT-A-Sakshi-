@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="name" id="literals">
+    <h1 id ="changedName"></h1>
+    <script>
+        let firstname = 30;
+        let lastname = "sharma";
+        let x = `welcome to ${firstname}`;
+       
+        const heading = document.getElementById("changedName");
+        const input = document.getElementById("literals");
+        
+        input.addEventListener('input', function() {
+            heading.innerHTML = `Welcome, ${input.value}!`;
+        });
+        
+
+</script>
+    
+</body>
+</html>
