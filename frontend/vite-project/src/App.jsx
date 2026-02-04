@@ -1,65 +1,43 @@
-import './App.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+ import './App.css'
+import 'bootstrap';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Card from './components/Card.jsx';
+import Navbar from './components/Navbar.jsx';
+import Usestate from './components/Usestate.jsx';
+import count1 from './components/count1.jsx';
+import Link1 from './components/link1.jsx';
+import Button from './components/Button.jsx';
+import APIFetch from './components/APIFetch.jsx';
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
     <>
-      <Container className="my-5">
-        <Row className="g-4">
-          {/* Card 1 */}
-          <Col md={4}>
-            <Card className="shadow h-100">
-              <Card.Header className="bg-primary text-white text-center fs-5">
-                Card 1
-              </Card.Header>
-              <Card.Body>
-                <Card.Text>
-                  This is the first card. You can add your content here.
-                </Card.Text>
-                <Button variant="primary">Action</Button>
-              </Card.Body>
-            </Card>
-          </Col>
+      <Navbar />
+      <div>
+      {/* <br/>
+      
+     <div>
 
-          {/* Card 2 */}
-          <Col md={4}>
-            <Card className="shadow h-100">
-              <Card.Header className="bg-success text-white text-center fs-5">
-                Card 2
-              </Card.Header>
-              <Card.Body>
-                <Card.Text>
-                  This is the second card. You can add your content here.
-                </Card.Text>
-                <Button variant="success">Action</Button>
-              </Card.Body>
-            </Card>
-          </Col>
+      <Card name="sakshi"/>
+      <br/>
+      <Card name="rakhi"/>
+      <br/>
+      <Card name="shalini"/>
+      <br/>
+      <Card name="riya"/>
 
-          {/* Card 3 */}
-          <Col md={4}>
-            <Card className="shadow h-100">
-              <Card.Header className="bg-warning text-dark text-center fs-5">
-                Card 3
-              </Card.Header>
-              <Card.Body>
-                <Card.Text>
-                  This is the third card. You can add your content here.
-                </Card.Text>
-                <Button variant="warning" className="text-dark">
-                  Action
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+      <div>
+        <Button/>
+      </div> */}
+      <APIFetch/>
+
+      </div>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

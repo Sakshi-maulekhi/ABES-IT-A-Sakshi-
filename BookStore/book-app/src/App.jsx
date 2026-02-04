@@ -6,6 +6,7 @@ import Navbar from './components/navbar.jsx'
 import Book from './components/book.jsx'
 import { Routes, Route } from 'react-router-dom'
 import Login from './components/Login.jsx'
+import { BrowserRouter as Router } from 'react-router-dom';
 
 
 
@@ -14,18 +15,20 @@ function App() {
 
   return (
     <div>
+      
       <Navbar />
       <Routes>
         <Route path="/login" element={<Login />} />
       </Routes>
+      
         
         
-      <hr />
+      {/* <hr />
       <Book/>
       <br/>
       <Book/>
       <br/>
-      <Book/>
+      <Book/> */}
       
     </div>
   )
