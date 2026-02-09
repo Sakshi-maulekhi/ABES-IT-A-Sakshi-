@@ -51,7 +51,23 @@
 // app.listen(PORT, () => console.log(`server is running on port ${PORT}`));
 
 const fs = require('fs');
-fs.writeFile("./it-a.txt","we are student of it-a",(err)=>{});
-fs.writeFileSync("./abes","we are student of abes")
-const result = fs.readFileSync("./it-a.txt","utf-8");
-console.log(result);
+// fs.writeFile("./it-a.txt","we are student of it-a",()=>{});
+// fs.writeFileSync("./abes","we are student of abes")
+// const result = fs.readFileSync("./it-a.txt","utf-8");
+// console.log(result);
+// fs.readFile("./it-a.txt","utf-8",(err,data)=>{
+//     if(err){
+//         console.log(err);
+//     }else{ 
+//         console.log(data);
+//     }
+// })
+// fs.appendFileSync("./it-a.txt","i am happy");
+// fs.appendFile("./it-a.txt"," and i am happy",()=>{});
+
+// fs.cpSync("./a1.txt","./b1.txt");
+fs.cp("./a1.txt","./b1.txt",()=>{});
+fs.cp("./a1.txt","./c1.txt",()=>{});
+fs.unlinkSync("./c1.txt");
+
+
