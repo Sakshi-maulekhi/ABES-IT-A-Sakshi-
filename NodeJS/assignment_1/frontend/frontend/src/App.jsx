@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./App.css";
 
 function App() {
   const [text, setText] = useState("");
@@ -29,8 +30,14 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: "center", fontFamily: "Arial" }}>
-      
+    <div
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        fontFamily: "Arial",
+      }}
+    >
       {/* Header */}
       <header
         style={{
@@ -39,43 +46,66 @@ function App() {
           alignItems: "center",
           gap: "15px",
           padding: "20px",
-          backgroundColor: "#f5f5f5",
+          backgroundColor: "#755d5d",
+          color: "white",
+          width: "100%",
         }}
       >
         <img src="/logo.png" alt="College Logo" width="60" />
-        <h2>Your College Name</h2>
+        <h2>ABES Engineering College</h2>
       </header>
 
       {/* Main Section */}
-      <main style={{ marginTop: "50px" }}>
-        <h1>Welcome to File Manager</h1>
+      <main
+        style={{
+          flex: 1,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <h1>FS Model for Node</h1>
 
         <input
           type="text"
           placeholder="Enter file content..."
           value={text}
           onChange={(e) => setText(e.target.value)}
-          style={{ padding: "10px", width: "300px", marginTop: "20px" }}
+          style={{
+            padding: "10px",
+            width: "300px",
+            marginTop: "20px",
+            borderRadius: "5px",
+            border: "1px solid #ccc",
+          }}
         />
 
         <div style={{ marginTop: "20px" }}>
           <button
             onClick={handleCreateFile}
-            style={{ padding: "10px 20px", marginRight: "10px" }}
+            style={{
+              padding: "10px 20px",
+              marginRight: "10px",
+              cursor: "pointer",
+            }}
           >
             Create File
           </button>
 
           <button
             onClick={handleReadFile}
-            style={{ padding: "10px 20px" }}
+            style={{
+              padding: "10px 20px",
+              cursor: "pointer",
+            }}
           >
             Read File
           </button>
         </div>
 
         {fileContent && (
-          <div style={{ marginTop: "30px" }}>
+          <div style={{ marginTop: "30px", textAlign: "center" }}>
             <h3>File Content:</h3>
             <p>{fileContent}</p>
           </div>

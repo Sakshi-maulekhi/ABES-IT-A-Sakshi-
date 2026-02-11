@@ -66,8 +66,9 @@ const fs = require('fs');
 // fs.appendFile("./it-a.txt"," and i am happy",()=>{});
 
 // fs.cpSync("./a1.txt","./b1.txt");
-fs.cp("./a1.txt","./b1.txt",()=>{});
-fs.cp("./a1.txt","./c1.txt",()=>{});
-fs.unlinkSync("./c1.txt");
+// fs.cp("./a1.txt","./b1.txt",()=>{});
+// fs.cp("./a1.txt","./c1.txt",()=>{});
+// fs.unlinkSync("./c1.txt");
+
 
 
